@@ -26,20 +26,33 @@ public class CalcolaBiglietto {
 
 		System.out.print("Insert number of kilometers: ");
 		km = scanner.nextDouble();
+		String kmFormat = String.format("%.2f", km);
+		// System.out.println(kmFormat);
 		System.out.print("Insert age: ");
 		age = scanner.nextDouble();
+		String ageFormat = String.format("%.2f", age);
+		// System.out.println(ageFormat);
 		
 		ticketPrice = (km * eurXKm);
 		
-		double scontoGgiovani = 0.2 * ticketPrice;
-		double scontoOver65 = 0.4 * ticketPrice;
+		double ticketGgiovani = ticketPrice - (0.2 * ticketPrice);
+		double ticketOver65 = ticketPrice - (0.4 * ticketPrice);
 		
+
+	
+		String ticketPriceFormat = String.format("%.2f", ticketPrice);
+		String ticketGgiovaniFormat = String.format("%.2f", ticketGgiovani);
+		String ticketOver65Format = String.format("%.2f", ticketOver65);
+		
+
+		
+
 		if(age < 18) {
-			System.out.println("Ticket price: " + (ticketPrice - scontoGgiovani));
+			System.out.println("Ticket price: " + ticketGgiovaniFormat);
 		} else if(age >= 65) {
-			System.out.println("Ticket price: " + (ticketPrice - scontoOver65));
+			System.out.println("Ticket price: " + ticketOver65Format);
 		}else {
-			System.out.println("Ticket price: " + ticketPrice);
+			System.out.println("Ticket price: " + ticketPriceFormat);
 		}
 		
 
