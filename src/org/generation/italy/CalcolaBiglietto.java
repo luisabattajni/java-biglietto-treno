@@ -15,7 +15,6 @@ public class CalcolaBiglietto {
 		 * else per gli altri
 		 */
 		
-		//nb togliere le varie prove stampa x ultimo push
 		
 		// init Scanner
 		Scanner scanner = new Scanner(System.in);
