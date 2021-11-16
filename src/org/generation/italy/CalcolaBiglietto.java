@@ -37,6 +37,7 @@ public class CalcolaBiglietto {
 		
 		double ticketGgiovani = ticketPrice - (0.2 * ticketPrice);
 		double ticketOver65 = ticketPrice - (0.4 * ticketPrice);
+		String outputMessage;
 		
 
 	
@@ -48,14 +49,14 @@ public class CalcolaBiglietto {
 		
 
 		if(age < 18) {
-			System.out.println("Ticket price: " + ticketGgiovaniFormat);
+			outputMessage = ("Ticket price: " + ticketGgiovaniFormat);
 		} else if(age >= 65) {
-			System.out.println("Ticket price: " + ticketOver65Format);
+			outputMessage = ("Ticket price: " + ticketOver65Format);
 		}else {
-			System.out.println("Ticket price: " + ticketPriceFormat);
+			outputMessage = ("Ticket price: " + ticketPriceFormat);
 		}
 		
-
+		System.out.println(outputMessage);
 		
 		
 		//close Scanner
