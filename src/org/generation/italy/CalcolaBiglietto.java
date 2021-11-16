@@ -35,11 +35,11 @@ public class CalcolaBiglietto {
 		double scontoOver65 = 0.4 * ticketPrice;
 		
 		if(age < 18) {
-			System.out.println(ticketPrice - scontoGgiovani);
+			System.out.println("Ticket price: " + (ticketPrice - scontoGgiovani));
 		} else if(age >= 65) {
-			System.out.println(ticketPrice - scontoOver65);
+			System.out.println("Ticket price: " + (ticketPrice - scontoOver65));
 		}else {
-			System.out.println(ticketPrice);
+			System.out.println("Ticket price: " + ticketPrice);
 		}
 		
 
